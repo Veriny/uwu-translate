@@ -3,14 +3,14 @@ def uwu():
     tx = content.get()
     lst = list(tx)
     for i in range (len(lst)):
-        if lst[i] == 'l' or lst[i] == 'r':
-            replace(lst, i, 'w')
-        elif lst[i] == '.':
-            replace(lst, i, ' uwu.')
-        elif lst[i] == '!':
-            replace(lst, i, ' owo.')
-        elif lst[i] == '?':
-            replace(lst, i, ' ;-;.')
+        if lst[i] == '{':
+            replace(lst, i, '{ \n   ')
+        elif lst[i] == '}':
+            replace(lst, i, '} \n \n')
+        elif lst[i] == ';' and lst[i + 1] != '}':
+            replace(lst, i, '; \n   ')
+        elif lst[i] == ';':
+            replace(lst, i, '; \n')
 
     res.set(''.join(lst))
 
